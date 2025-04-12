@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="../Assets/CSS/estilo2.css">
+    <script src="../Assets/JS/Inventario.js" defer></script> <style>
+        header {
+            background-color: #007bff; /* Un azul similar al de la imagen */
+            color: white;
+            padding: 10px 20px; /* Reducir el padding vertical */
+            display: flex;
+            justify-content: space-between; /* Espacio entre logo y navegación */
+            align-items: center; /* Centrar verticalmente los elementos */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px; /* Ajustar la altura del logo */
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.5em; /* Reducir el tamaño del título */
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Alinear los elementos de la lista horizontalmente */
+        }
+
+        nav ul li {
+            margin-left: 15px; /* Espacio entre los elementos del menú */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.9em; /* Reducir el tamaño de la fuente del menú */
+            transition: color 0.3s;
+            padding: 5px 10px; /* Añadir un poco de padding a los enlaces */
+            border-radius: 5px; /* Opcional: añadir bordes redondeados */
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Assets/Images/Mifarma.png" alt="MIFARMA Logo"> <h1>Inventario</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html"><img src="../Assets/Images/botica.png" alt="Inventario" style="height: 20px; vertical-align: middle; margin-right: 5px;"> Pagina Principal</a></li> <li><a href="Ventas.html"><img src="../Assets/Images/ventas.png" alt="Ventas" style="height: 20px; vertical-align: middle; margin-right: 5px;"> Ventas</a></li>
+                <li><a href="AtencionClientes.html"><img src="../Assets/Images/atencionCliente.png" alt="Atención al Cliente" style="height: 20px; vertical-align: middle; margin-right: 5px;"> Atención al Cliente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="productos">
+            <h2>Lista de Productos</h2>
+            <table id="tabla-productos">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <button class="agregar" onclick="mostrarFormulario()">Agregar Producto</button>
+        </section>
+
+        <section id="formulario" class="formulario" style="display: none;">
+            <h3>Agregar Nuevo Producto</h3>
+            <input type="text" id="nombreProducto" placeholder="Nombre del Producto" required>
+            <input type="number" id="precioProducto" placeholder="Precio" required>
+            <input type="number" id="cantidadProducto" placeholder="Cantidad" required>
+            <button onclick="agregarProducto()">Agregar</button>
+            <button onclick="cancelarFormulario()">Cancelar</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MIFARMA. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

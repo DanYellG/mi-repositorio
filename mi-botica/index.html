@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MI FARMA - Página Principal</title>
+  <link rel="stylesheet" href="Assets/CSS/estilo.css">
+</head>
+<body>
+  <header>
+    <!-- Contenedor Centralizado -->
+    <div class="menu-container">
+      <div class="logo-container">
+        <img src="Assets/Images/Mifarma.png" alt="Logo Botica" class="logo">
+        <h1>MI FARMA</h1>
+      </div>
+
+      <!-- Navegación en el menú -->
+      <nav>
+        <ul>
+          <li><a href="Pages/Inventario.html"><img src="Assets/Images/inventario.png" alt="Inventario"> Inventario</a></li>
+          <li><a href="Pages/Ventas.html"><img src="Assets/Images/ventas.png" alt="Ventas"> Ventas</a></li>
+          <li><a href="Pages/AtencionClientes.html"><img src="Assets/Images/atencionCliente.png" alt="Atención al Cliente"> Atención al Cliente</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor">
+      <section class="bienvenida tarjeta">
+        <div class="bienvenida-texto">
+          <h2>Bienvenido a MIFARMA, tu farmacia de confianza</h2>
+          <p>En MIFARMA nos enorgullece ofrecerte productos farmacéuticos de calidad, atención personalizada y un compromiso constante con tu salud y bienestar. Sabemos que cada persona tiene necesidades únicas, por eso nuestro equipo está siempre dispuesto a brindarte el mejor consejo y orientación para que tomes decisiones informadas sobre tu salud. Contamos con una amplia variedad de medicamentos, productos de cuidado personal, y servicios que te ayudarán a sentirte bien. Ya sea que necesites un medicamento específico, asesoría en cuidado preventivo o productos para el cuidado de la piel, en MIFARMA encontrarás lo que buscas, con la seguridad de contar con los mejores estándares de calidad y un servicio amable.</p>
+        </div>
+        <div class="bienvenida-imagen">
+          <img src="Assets/Images/foto1.jpg" alt="Foto de la farmacia" class="imagen-bienvenida">
+        </div>
+      </section>
+
+      <section class="imagenes-section tarjeta">
+        <h2>Descubre Nuestros Productos</h2>
+        <div class="imagenes-container">
+          <img src="Assets/Images/foto2.jpg" alt="Producto 1" class="producto-imagen">
+          <img src="Assets/Images/foto3.jpg" alt="Producto 2" class="producto-imagen">
+          <img src="Assets/Images/foto4.jpg" alt="Producto 3" class="producto-imagen">
+          <img src="Assets/Images/foto5.jpg" alt="Producto 4" class="producto-imagen">
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MIFARMA. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
+
+  <script src="Assets/JS/Botica.js"></script>
+</body>
+</html>

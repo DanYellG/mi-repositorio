@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventas - Botica</title>
+  <link rel="stylesheet" href="../Assets/CSS/estilo3.css">
+</head>
+<body>
+  <header>
+    <div class="header-contenido">
+      <div class="logo">
+        <h1>Ventas</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html"><img src="../Assets/Images/botica.png" alt="Página Principal" style="height: 20px; vertical-align: middle; margin-right: 5px;"> Página Principal</a></li>
+          <li><a href="Inventario.html"><img src="../Assets/Images/inventario.png" alt="Inventario" style="height: 20px; vertical-align: middle; margin-right: 5px;"> Inventario</a></li>
+          <li><a href="AtencionClientes.html"><img src="../Assets/Images/atencionCliente.png" alt="Atención al Cliente" style="height: 20px; vertical-align: middle; margin-right: 5px;"> Atención al Cliente</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor">
+      <section class="venta-form tarjeta">
+        <h2>Realizar Venta</h2>
+        <form id="ventaForm">
+          <!-- Nombre del Cliente -->
+          <div class="form-group">
+            <label for="nombreCliente">Nombre del Cliente:</label>
+            <input type="text" id="nombreCliente" required>
+          </div>
+
+          <!-- Producto -->
+          <div class="form-group">
+            <label for="producto">Producto:</label>
+            <select id="producto" required>
+              <option value="paracetamol">Paracetamol</option>
+              <option value="ibuprofeno">Ibuprofeno</option>
+              <option value="vitaminaC">Vitamina C</option>
+              <option value="aspirina">Aspirina</option>
+              <option value="antigripal">Antigripal</option>
+              <option value="amilase">Amilase</option>
+              <option value="cremaAntibacterial">Crema Antibacterial</option>
+              <option value="antialergico">Antialérgico</option>
+              <option value="jarabeTos">Jarabe para la tos</option>
+            </select>
+          </div>
+
+          <!-- Cantidad -->
+          <div class="form-group">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" min="1" required>
+            <span id="errorCantidad" class="error-message" style="display: none;">Debe ser un número mayor que 0</span>
+          </div>
+
+          <button type="submit" class="btn">Vender</button>
+        </form>
+
+        <!-- Mensaje de confirmación -->
+        <div id="mensaje-confirmacion" class="mensaje-confirmacion" style="display: none;">
+          <p>¡Venta realizada con éxito!</p>
+        </div>
+      </section>
+
+      <section class="registros">
+        <h2>Historial de Ventas</h2>
+        <div class="registro">
+          <p><strong>Producto:</strong> Paracetamol</p>
+          <p><strong>Cantidad:</strong> 2</p>
+          <p><strong>Fecha:</strong> 12/04/2025</p>
+        </div>
+
+        <div class="registro">
+          <p><strong>Producto:</strong> Ibuprofeno</p>
+          <p><strong>Cantidad:</strong> 3</p>
+          <p><strong>Fecha:</strong> 11/04/2025</p>
+        </div>
+
+        <div class="registro">
+          <p><strong>Producto:</strong> Vitamina C</p>
+          <p><strong>Cantidad:</strong> 1</p>
+          <p><strong>Fecha:</strong> 10/04/2025</p>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MIFARMA. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="Ventas.js"></script>
+</body>
+</html>
