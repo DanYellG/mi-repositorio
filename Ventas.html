@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas - MiFarma</title>
+    <link rel="stylesheet" href="css/Ventas.css">
+    <script src="https://kit.fontawesome.com/your_fontawesome_kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="sales-container">
+        <h1>Gestión de Ventas y Proveedores</h1>
+        <button class="btn btn-secondary back-button" onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i> Regresar</button>
+
+        <section class="sales-section">
+            <h2>Ventas</h2>
+            <div class="sales-actions">
+                <button class="btn btn-primary add-sale-btn"><i class="fas fa-plus"></i> Nueva Venta</button>
+                <button class="btn btn-info view-sales-btn"><i class="fas fa-list"></i> Ver Ventas</button>
+            </div>
+            <div id="new-sale-form" style="display: none;">
+                <h3>Nueva Venta</h3>
+                <form id="saleForm">
+                    <div class="form-group">
+                        <label for="product">Producto:</label>
+                        <input type="text" id="product" name="product" placeholder="Nombre del Producto">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Cantidad:</label>
+                        <input type="number" id="quantity" name="quantity" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Precio Unitario:</label>
+                        <input type="number" step="0.01" id="price" name="price">
+                    </div>
+                    <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Guardar Venta</button>
+                    <button type="button" class="btn btn-warning cancel-sale-btn"><i class="fas fa-times"></i> Cancelar</button>
+                </form>
+            </div>
+            <div id="sales-list">
+                </div>
+        </section>
+
+        <section class="suppliers-section">
+            <h2>Proveedores Peruanos</h2>
+            <div class="suppliers-list">
+                <div class="supplier-card" data-supplier-id="1">
+                    <h3>Distribuidora Farmacéutica del Perú S.A.C.</h3>
+                    <p><strong>RUC:</strong> 20100012345</p>
+                    <p><strong>Contacto:</strong> Juan Pérez</p>
+                    <p><strong>Teléfono:</strong> (01) 555-1212</p>
+                    <button class="btn btn-info view-supplier-details"><i class="fas fa-eye"></i> Detalles</button>
+                </div>
+                <div class="supplier-card" data-supplier-id="2">
+                    <h3>Corporación Peruana de Productos Farmacéuticos S.R.L.</h3>
+                    <p><strong>RUC:</strong> 20500067890</p>
+                    <p><strong>Contacto:</strong> María Gómez</p>
+                    <p><strong>Teléfono:</strong> (01) 444-5656</p>
+                    <button class="btn btn-info view-supplier-details"><i class="fas fa-eye"></i> Detalles</button>
+                </div>
+                <div class="supplier-card" data-supplier-id="3">
+                    <h3>Importadora y Exportadora de Medicamentos Inkafarma E.I.R.L.</h3>
+                    <p><strong>RUC:</strong> 20600112233</p>
+                    <p><strong>Contacto:</strong> Carlos López</p>
+                    <p><strong>Teléfono:</strong> (01) 333-9898</p>
+                    <button class="btn btn-info view-supplier-details"><i class="fas fa-eye"></i> Detalles</button>
+                </div>
+                </div>
+            <button class="btn btn-primary add-supplier-btn"><i class="fas fa-plus"></i> Nuevo Proveedor</button>
+            <div id="new-supplier-form" style="display: none;">
+                <h3>Nuevo Proveedor</h3>
+                <form id="supplierForm">
+                    <div class="form-group">
+                        <label for="supplierName">Nombre del Proveedor:</label>
+                        <input type="text" id="supplierName" name="supplierName">
+                    </div>
+                    <div class="form-group">
+                        <label for="supplierRUC">RUC:</label>
+                        <input type="text" id="supplierRUC" name="supplierRUC">
+                    </div>
+                    <div class="form-group">
+                        <label for="supplierContact">Contacto:</label>
+                        <input type="text" id="supplierContact" name="supplierContact">
+                    </div>
+                    <div class="form-group">
+                        <label for="supplierPhone">Teléfono:</label>
+                        <input type="tel" id="supplierPhone" name="supplierPhone">
+                    </div>
+                    <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Guardar Proveedor</button>
+                    <button type="button" class="btn btn-warning cancel-supplier-btn"><i class="fas fa-times"></i> Cancelar</button>
+                </form>
+            </div>
+            <div id="supplier-details-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3 id="supplier-name"></h3>
+                    <p><strong>RUC:</strong> <span id="supplier-ruc"></span></p>
+                    <p><strong>Contacto:</strong> <span id="supplier-contact"></span></p>
+                    <p><strong>Teléfono:</strong> <span id="supplier-phone-detail"></span></p>
+                    </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="Js/Ventas.js"></script>
+</body>
+</html>

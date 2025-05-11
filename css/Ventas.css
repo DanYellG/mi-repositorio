@@ -1,0 +1,280 @@
+
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: url('../imagenes/botica.jpg') center/cover no-repeat fixed;
+    position: relative;
+    color: #333;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.sales-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.back-button {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px; /* Botones más pequeños */
+    border: 1px solid #ccc; /* Borde sutil gris */
+    border-radius: 4px; /* Bordes más rectos */
+    cursor: pointer;
+    color: #333; /* Texto gris oscuro */
+    font-weight: normal; /* Texto normal */
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 8px; /* Menos margen derecho */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Sombra más ligera */
+}
+
+.btn:hover {
+    background-color: #eee; /* Gris claro al pasar el mouse */
+    border-color: #bbb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #ffb300; /* Naranja más brillante */
+    color: white;
+    border-color: #ffb300;
+}
+
+.btn-primary:hover {
+    background-color: #e6a000;
+    border-color: #e6a000;
+}
+
+.btn-secondary {
+    background-color: #888; /* Gris medio */
+    color: white;
+    border-color: #888;
+}
+
+.btn-secondary:hover {
+    background-color: #666;
+    border-color: #666;
+}
+
+.btn-success {
+    background-color: #8bc34a; /* Verde grisáceo */
+    color: white;
+    border-color: #8bc34a;
+}
+
+.btn-success:hover {
+    background-color: #6e973e;
+    border-color: #6e973e;
+}
+
+.btn-info {
+    background-color: #03a9f4; /* Azul grisáceo claro */
+    color: white;
+    border-color: #03a9f4;
+}
+
+.btn-info:hover {
+    background-color: #0288d1;
+    border-color: #0288d1;
+}
+
+.btn-warning {
+    background-color: #ff9800; /* Naranja cálido */
+    color: white;
+    border-color: #ff9800;
+}
+
+.btn-warning:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
+}
+
+.back-button {
+    margin-bottom: 20px;
+}
+
+.sales-actions {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.suppliers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño de tarjetas responsivo */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.supplier-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    animation: slideIn 0.5s ease-out forwards; /* Animación al cargar */
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.supplier-card h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.supplier-card p {
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: zoomIn 0.3s ease-out; /* Animación al aparecer */
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+/* Estilos para la tabla de ventas */
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white; /* Fondo blanco para la tabla */
+    border-radius: 6px;
+    overflow: hidden; /* Para que el border-radius funcione correctamente con los bordes internos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sales-table th,
+.sales-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.sales-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.sales-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.sales-table tbody tr:hover {
+    background-color: #f5f5f5;
+}

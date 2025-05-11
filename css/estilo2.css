@@ -1,0 +1,82 @@
+/* Estilos para la página de Login */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url('../imagenes/botica.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Para que la imagen de fondo no se desplace con el scroll */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente para el difuminado */
+    z-index: -1; /* Para que esté detrás del contenido */
+}
+
+.contenedor-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.formulario-login {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.formulario-login h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.formulario-login input[type="text"],
+.formulario-login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.formulario-login button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-login button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.formulario-login p {
+    color: #ccc;
+    margin-top: 20px;
+}
+
+.formulario-login a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.formulario-login a:hover {
+    text-decoration: underline;
+}
