@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atención al Cliente - MiFarma</title>
+    <link rel="stylesheet" href="css/AtencionClientes.css">
+    <script src="https://kit.fontawesome.com/your_fontawesome_kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="customer-service-container">
+        <button class="btn btn-secondary back-button" onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i> Regresar</button>
+        <h1>Atención al Cliente</h1>
+
+        <section class="new-inquiry-section entrada-suave">
+            <h2>Nueva Consulta</h2>
+            <form id="newInquiryForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerName">Nombre:</label>
+                        <input type="text" id="customerName" name="customerName">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerAge">Edad:</label>
+                        <input type="number" id="customerAge" name="customerAge">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerDNI">DNI:</label>
+                        <input type="text" id="customerDNI" name="customerDNI">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerEmail">Email:</label>
+                        <input type="email" id="customerEmail" name="customerEmail">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Teléfono:</label>
+                    <input type="tel" id="customerPhone" name="customerPhone">
+                </div>
+                <div class="form-group full-width">
+                    <label for="inquiryDetails">Detalles de la Consulta:</label>
+                    <textarea id="inquiryDetails" name="inquiryDetails"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+                    <button type="button" class="btn btn-secondary">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <div id="mensaje-confirmacion" class="aparecer-animado" style="display: none;">
+            ¡Gracias por tu consulta! Hemos recibido tu mensaje.
+        </div>
+
+        <section class="inquiries-list-section">
+            <h2>Consultas Recientes</h2>
+            <ul class="customer-inquiries-list">
+                <li class="entrada-suave">
+                    <h3>Consulta #123 - Problema con el pedido</h3>
+                    <p><strong>Cliente:</strong> Juan Pérez</p>
+                    <p><strong>Fecha:</strong> 2025-05-10</p>
+                    <button class="btn btn-info">Ver Detalles</button>
+                </li>
+                <li class="entrada-suave">
+                    <h3>Consulta #124 - Información sobre un producto</h3>
+                    <p><strong>Cliente:</strong> María Gómez</p>
+                    <p><strong>Fecha:</strong> 2025-05-09</p>
+                    <button class="btn btn-info">Ver Detalles</button>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="Js/AtencionClientes.js"></script>
+</body>
+</html>
